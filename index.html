@@ -62,7 +62,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="/img/u4.gif" class="animated zoomIn">
+            <img src="/img/u.gif" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">kuye</a></h1>
@@ -186,7 +186,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="/img/u4.gif" class="animated zoomIn">
+                <img src="/img/u.gif" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">kuye</a></h1>
@@ -221,6 +221,74 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-DhtmlxGantt-甘特图的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/11/DhtmlxGantt-甘特图的使用/" class="article-date">
+      <time datetime="2016-04-11T06:10:58.000Z" itemprop="datePublished">2016-04-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/11/DhtmlxGantt-甘特图的使用/">DhtmlxGantt的使用(一)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>dhtmlxGantt是一个开源的JavaScript甘特图，是DHTMLX组件中的一个，可以帮助您有一个非常漂亮的图表可视化项目进度。它可以显示任务之间的依赖关系为线，并允许您设置的任务之间的不同关系 （结束到开始，开始-开始，终端到终端）。dhtmlxGantt提供了灵活的API和大量的事件句柄，它给你自由定制您的需求。<br><img src="http://i.imgur.com/LpVQ8ZG.png" alt=""></p>
+<h2 id="版本和许可证"><a href="#版本和许可证" class="headerlink" title="版本和许可证"></a>版本和许可证</h2><p><img src="http://i.imgur.com/zZJmu7w.png" alt=""></p>
+<p>dhtmlxGantt分为标准版和专业版。标准版采用GPL协议，专业版需要支付额外的费用。</p>
+<p>dhtmlxGantt发布许可证：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">开源- GPL -允许您使用dhtmlxGantt标准在GPL-ED项目免费。</span><br><span class="line"></span><br><span class="line">商业许可（$ 449） -允许您在一个项目（应用程序）具有无限份数的使用dhtmlxGantt PRO。有了这个许可证，您将收到1个月的技术支持（或12个月内5支持请求）。</span><br><span class="line"></span><br><span class="line">企业许可证（$ 979） -允许您使用dhtmlxGantt PRO在一家公司开发的项目中无限使用。票务支持，版本升级，并可以导出为PDF / PNG等文件，没有水印，提供了12个月的免费升级。</span><br><span class="line">企业许可证包括一个额外的PRO特性-到一个页面上显示多个甘特图的能力。</span><br></pre></td></tr></table></figure></p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><ul>
+<li>下载dhtmlxGantt：<a href="http://dhtmlx.com/docs/products/dhtmlxGantt/" title="dhtmlxGantt" target="_blank" rel="external">http://dhtmlx.com/docs/products/dhtmlxGantt/</a></li>
+<li>解压压缩包</li>
+</ul>
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><h3 id="复制下面两个文件到你的项目里面去"><a href="#复制下面两个文件到你的项目里面去" class="headerlink" title="复制下面两个文件到你的项目里面去"></a>复制下面两个文件到你的项目里面去</h3><ul>
+<li>dhtmlxgantt.js</li>
+<li>dhtmlxgantt.css</li>
+</ul>
+<h3 id="在你的页面引用上面两个文件"><a href="#在你的页面引用上面两个文件" class="headerlink" title="在你的页面引用上面两个文件"></a>在你的页面引用上面两个文件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span>How to Start with dhtmlxGantt<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"codebase/dhtmlxgantt.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"codebase/dhtmlxgantt.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    //your code will be here</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><h3 id="初始化dhtmlxGantt"><a href="#初始化dhtmlxGantt" class="headerlink" title="初始化dhtmlxGantt"></a>初始化dhtmlxGantt</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span>How to Start with dhtmlxGantt<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"codebase/dhtmlxgantt.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"codebase/dhtmlxgantt.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gantt_here"</span> <span class="attr">style</span>=<span class="string">'width:1000px; height:400px;'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">        gantt.init("gantt_here");</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><h3 id="加载数据"><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tasks = &#123;</span><br><span class="line">    data:[</span><br><span class="line">        &#123;id:<span class="number">1</span>, text:<span class="string">"Project #1"</span>,start_date:<span class="string">"01-04-2013"</span>, duration:<span class="number">11</span>,</span><br><span class="line">        progress: <span class="number">0.6</span>, open: <span class="literal">true</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">2</span>, text:<span class="string">"Task #1"</span>,   start_date:<span class="string">"03-04-2013"</span>, duration:<span class="number">5</span>, </span><br><span class="line">        progress: <span class="number">1</span>,   open: <span class="literal">true</span>, parent:<span class="number">1</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">3</span>, text:<span class="string">"Task #2"</span>,   start_date:<span class="string">"02-04-2013"</span>, duration:<span class="number">7</span>, </span><br><span class="line">        progress: <span class="number">0.5</span>, open: <span class="literal">true</span>, parent:<span class="number">1</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">4</span>, text:<span class="string">"Task #2.1"</span>, start_date:<span class="string">"03-04-2013"</span>, duration:<span class="number">2</span>, </span><br><span class="line">        progress: <span class="number">1</span>,   open: <span class="literal">true</span>, parent:<span class="number">3</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">5</span>, text:<span class="string">"Task #2.2"</span>, start_date:<span class="string">"04-04-2013"</span>, duration:<span class="number">3</span>, </span><br><span class="line">        progress: <span class="number">0.8</span>, open: <span class="literal">true</span>, parent:<span class="number">3</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">6</span>, text:<span class="string">"Task #2.3"</span>, start_date:<span class="string">"05-04-2013"</span>, duration:<span class="number">4</span>, </span><br><span class="line">        progress: <span class="number">0.2</span>, open: <span class="literal">true</span>, parent:<span class="number">3</span>&#125;</span><br><span class="line">    ],</span><br><span class="line">    links:[</span><br><span class="line">        &#123;id:<span class="number">1</span>, source:<span class="number">1</span>, target:<span class="number">2</span>, type:<span class="string">"1"</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">2</span>, source:<span class="number">1</span>, target:<span class="number">3</span>, type:<span class="string">"1"</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">3</span>, source:<span class="number">3</span>, target:<span class="number">4</span>, type:<span class="string">"1"</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">4</span>, source:<span class="number">4</span>, target:<span class="number">5</span>, type:<span class="string">"0"</span>&#125;,</span><br><span class="line">        &#123;id:<span class="number">5</span>, source:<span class="number">5</span>, target:<span class="number">6</span>, type:<span class="string">"0"</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//修改上一步代码</span></span><br><span class="line">gantt.init(<span class="string">"gantt_here"</span>); </span><br><span class="line">gantt.parse (tasks);</span><br></pre></td></tr></table></figure>
+<h2 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h2><h3 id="展示结果"><a href="#展示结果" class="headerlink" title="展示结果"></a>展示结果</h3><p><img src="http://i.imgur.com/otmwILM.png" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-node-java" class="article article-type-post" itemscope itemprop="blogPost">
   
